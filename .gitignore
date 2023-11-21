@@ -1,4 +1,6 @@
 /env
+/db.sqlite3
+
 /potentialai_assignment/__pycache__
-/potentialai_assignment/__pycache__/settings.cpython-310.pyc
-/potentialai_assignment/__pycache__/urls.cpython-310.pyc
+/user_api/__pycache__
+/user_api/migrations
