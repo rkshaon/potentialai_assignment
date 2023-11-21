@@ -1,3 +1,5 @@
+from rest_framework.mixins import ListModelMixin
+from rest_framework.viewsets import GenericViewSet
 from rest_framework.response import Response
 from rest_framework import viewsets
 from rest_framework import status
@@ -45,3 +47,8 @@ class UserViewSet(viewsets.ModelViewSet):
 
         user.save()
         return user
+
+
+class UserListView(GenericViewSet, ListModelMixin):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
