@@ -14,6 +14,9 @@ class ShopViewSet(viewsets.ModelViewSet):
 
 
     def create(self, request, *args, **kwargs):
+        print(f"Request: {request}")
+        print(f"User: {request.user}")
+        
         if not request.user.is_vendor:
             return Response({'error': 'Only vendors can create shops.'}, status=status.HTTP_403_FORBIDDEN)
 

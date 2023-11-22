@@ -29,6 +29,8 @@ class CustomUserManager(BaseUserManager):
 class User(AbstractUser):
     email = models.EmailField(unique=True)
     is_vendor = models.BooleanField(default=False)
+
+    USERNAME_FIELD = 'username'
     
     objects = CustomUserManager()
 
